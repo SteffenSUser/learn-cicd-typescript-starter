@@ -47,8 +47,8 @@ describe("getAPIKey", () => {
 
   test("returns the API key when the authorization header is valid", () => {
     const headers: IncomingHttpHeaders = {
-      //authorization: "ApiKey abc123",
-      authorization: "ApiKey",
+      authorization: "ApiKey abc123",
+      //authorization: "ApiKey",
     };
 
     expect(getAPIKey(headers)).toBe("abc123");
