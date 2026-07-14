@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 
-import {getAPIKey} from "../api/auth.js"
+import { getAPIKey } from "../api/auth.js";
 import { IncomingHttpHeaders } from "http";
 
 /*
@@ -24,10 +24,10 @@ export function getAPIKey(headers: IncomingHttpHeaders): string | null {
 
 // tests:
 describe("getAPIKey", () => {
-    test("returns null when the authorization header is missing", () => {
-        const headers: IncomingHttpHeaders = {};
-        expect(getAPIKey(headers)).toBeNull();
-    });
+  test("returns null when the authorization header is missing", () => {
+    const headers: IncomingHttpHeaders = {};
+    expect(getAPIKey(headers)).toBeNull();
+  });
 
   test("returns null when the authorization scheme is not ApiKey", () => {
     const headers: IncomingHttpHeaders = {
@@ -62,7 +62,6 @@ describe("getAPIKey", () => {
     expect(getAPIKey(headers)).toBe("abc123");
   });
 });
-
 
 /*
 // Example:

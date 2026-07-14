@@ -8,6 +8,14 @@ import { handlerReadiness } from "./api/readiness.js";
 import { handlerNotesCreate, handlerNotesGet } from "./api/notes.js";
 import { handlerUsersCreate, handlerUsersGet } from "./api/users.js";
 
+/*
+// test if linter to fix unused function (done)
+function unused() {
+  // this function does nothing
+  // and is called nowhere
+}
+*/
+
 const __dirname = path.resolve();
 
 if (!config.api.port) {
